@@ -204,8 +204,8 @@ table.results tr.mean td.best { color: inherit; }
 .finding { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
 .finding .n { font-family: var(--mono); font-size: .78rem; color: var(--muted); }
 .finding h3 { font-size: 1.1rem; font-weight: 700; margin: 4px 0 8px; }
-.finding p { font-size: .92rem; color: var(--muted); margin: 0; }
-.finding .stat { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; color: var(--dodge); margin: 6px 0 2px; }
+.finding p { font-size: .9rem; color: var(--muted); margin: 8px 0 0; }
+.finding .stat { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; color: var(--dodge); margin: 6px 0 2px; }
 .finding .stat small { display: block; font-size: .9rem; color: var(--muted); font-weight: 500; line-height: 1.4; margin-top: 2px; letter-spacing: 0; }
 
 .fig-row { display: grid; grid-template-columns: 1fr 1.6fr; gap: 14px; margin-top: 28px; align-items: start; }
@@ -224,6 +224,7 @@ table.results tr.mean td.best { color: inherit; }
 .panel[hidden] { display: none; }
 .scene-line { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: .95rem; color: var(--muted); margin-bottom: 14px; }
 .scene-line b { color: var(--text); }
+.scene-line .tool-btn { margin-left: auto; }
 .cmp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .cmp { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .cmp video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #ddd; cursor: pointer; }
@@ -236,7 +237,7 @@ table.results tr.mean td.best { color: inherit; }
 .cmp-tools { margin-top: 14px; display: flex; gap: 10px; align-items: center; }
 
 /* --- stats band ----------------------------------------------------------- */
-.stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 22px; }
 .stat-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 14px; text-align: center; }
 .stat-box .v { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.02em; }
 .stat-box .l { font-size: .8rem; color: var(--muted); margin-top: 2px; }
