@@ -14,7 +14,8 @@ https://reacthuman.github.io (plain static HTML, no build step; `.nojekyll` disa
 - `tools/build_assets.py` — regenerates everything under `static/video` and `static/img` from the
   local benchmark outputs (edit the `FAMILIES` / `COMPARE` / `DEMO` tables to swap clips).
 
-## TODO before going public
+## Links
 
-Search `index.html` for `TODO(` : venue badge, author list + affiliations, Paper / arXiv / Dataset
-links (remove `class="todo"`), BibTeX entry.
+- Paper / arXiv: https://arxiv.org/abs/2609.10895
+- Dataset: https://huggingface.co/datasets/Alan123/reacthuman-benchmark-scaled
+- The Code button currently points at the GitHub org; update it when the code repo is public.
