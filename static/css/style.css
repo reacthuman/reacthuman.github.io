@@ -87,7 +87,9 @@ section + section { border-top: 1px solid var(--line); }
 .teaser-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .teaser-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .teaser-item video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #ddd; }
-.teaser-item .cap { padding: 10px 12px 12px; font-size: .88rem; line-height: 1.4; display: flex; gap: 8px; align-items: flex-start; }
+.teaser-item .cap { padding: 10px 12px 12px; font-size: .88rem; line-height: 1.4; display: flex; flex-direction: column; gap: 2px; }
+.teaser-item .cap b { font-family: var(--mono); font-size: .8rem; }
+.teaser-item .cap span { color: var(--muted); }
 .teaser-item .cap .mark { flex: none; width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center; font-size: .75rem; font-weight: 700; color: #fff; margin-top: 1px; }
 .mark.ok { background: var(--ok); } .mark.bad { background: var(--bad); }
 .teaser-note { text-align: center; color: var(--muted); font-size: .92rem; margin-top: 16px; }
