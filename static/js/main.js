@@ -66,6 +66,37 @@
     });
   });
 
+  /* ---- family player: one video, 17 thumbnails, auto-advance ------------ */
+  const player = document.getElementById('fam-video');
+  const cap = document.getElementById('fam-cap');
+  const thumbs = Array.from(document.querySelectorAll('.thumb'));
+  if (player && thumbs.length) {
+    let idx = 0, userPaused = false;
+    const show = (i, play) => {
+      idx = (i + thumbs.length) % thumbs.length;
+      const t = thumbs[idx];
+      player.poster = t.dataset.poster;
+      player.src = t.dataset.video;
+      cap.innerHTML = '<b>' + t.dataset.fam + '</b> <span class="badge ' + t.dataset.gt + '">' +
+        t.dataset.gt.toUpperCase() + '</span> <span class="blurb">' + t.dataset.blurb + '</span>';
+      thumbs.forEach((x, j) => x.classList.toggle('active', j === idx));
+      if (play) player.play().catch(() => {});
+    };
+    thumbs.forEach((t, i) => t.addEventListener('click', () => { userPaused = false; show(i, true); }));
+    player.addEventListener('ended', () => { if (!userPaused) show(idx + 1, true); });
+    player.addEventListener('click', () => {
+      if (player.paused) { userPaused = false; player.play().catch(() => {}); }
+      else { userPaused = true; player.pause(); }
+    });
+    show(0, false);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting && !userPaused) player.play().catch(() => {});
+        else if (!e.isIntersecting) player.pause();
+      }), { threshold: 0.3 }).observe(player);
+    }
+  }
+
   /* ---- copy BibTeX ------------------------------------------------------ */
   const copyBtn = document.querySelector('.copy');
   if (copyBtn) {
