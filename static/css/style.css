@@ -132,7 +132,8 @@ pre.plan .k { color: #8fd3c7; } pre.plan .s { color: #f2c97d; } pre.plan .n { co
 .proto-foot b { color: var(--text); }
 
 /* --- stats band under hero ------------------------------------------------ */
-.statsband { padding: 28px 0 40px; }
+section.first { padding-top: 44px; }
+.statsband { padding: 32px 0; }
 .statsband .stats { margin-top: 0; }
 
 /* --- family player + thumbnails ------------------------------------------- */
